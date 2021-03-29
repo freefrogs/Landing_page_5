@@ -1,0 +1,64 @@
+.header {
+  background-image: $hero-gradient, url(../assets/header/hero.jpg);
+  min-height: 782px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  color: $main-light;
+}
+
+.nav {
+  padding-top: 59px;
+  @include arrange-children(space-between);
+  &__box {
+    @include arrange-children(center);
+  }
+  &__logo {
+    fill: $main-light;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 18px;
+    padding-left: 6px;
+    text-transform: uppercase;
+  }
+  &__list {
+    @include arrange-children(space-between);
+  }
+  &__item {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $main-light;
+    padding-left: 15px;
+    transition: $transition;
+    &:hover {
+      font-weight: 700;
+    }
+    &--active {
+      font-weight: 700;
+    }
+  }
+}
+
+.hero {
+  @include center;
+  text-align: center;
+  &__btn {
+    margin: 0 auto;
+  }
+  &__title {
+    font-size: 72px;
+    font-weight: 700;
+    letter-spacing: 5%;
+    text-transform: uppercase;
+    margin-bottom: 39px;
+  }
+  &__desc {
+    font-size: 24px;
+    font-weight: 600px;
+    line-height: 1.5;
+    max-width: 540px;
+    padding: 0 20px 39px;
+  }
+}
