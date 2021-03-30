@@ -1,0 +1,67 @@
+.contact {
+  padding: 117px 0 78px;
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  &__title {
+    font-size: 36px;
+    color: $main-dark;
+    padding-bottom: 60px;
+  }
+  &__paragraph {
+    line-height: 1.4;
+    font-size: 14px;
+    text-align: justify;
+    padding-right: 125px;
+  }
+  &__form {
+    max-width: 540px;
+  }
+  &__row {
+    position: relative;
+    &--small {
+      width: calc(50% - 15px);
+      display: inline-block;
+      &:first-child {
+        margin-right: 26px;
+      }
+    }
+    &--big {
+      width: 100%;
+    }
+  }
+  &__input {
+    font-family: $main-font;
+    font-size: 16px;
+    color: $main-dark;
+    padding: 21px 31px 20px;
+    margin-bottom: 22px;
+    width: 100%;
+    &::placeholder {
+      color: $placeholder;
+    }
+  }
+  &__option {
+    width: 100%;
+    color: $placeholder;
+    padding: 21px 31px 20px;
+    margin-bottom: 22px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url(../assets/arrow.png) no-repeat;
+    background-position: 500px center;
+  }
+  &__field--error {
+    border: 2px solid $details2;
+  }
+  &__text--error {
+    display: none;
+    position: absolute;
+    top: 78%;
+    font-size: 11px;
+    padding: 0 5px;
+    color: $details2;
+    margin-bottom: 22px;
+  }
+}
