@@ -134,6 +134,7 @@ body {
 
 .card {
   text-align: center;
+  position: relative;
   &__title {
     font-weight: 700;
     font-size: 18px;
@@ -141,5 +142,11 @@ body {
   }
   &__paragraph {
     font-size: 12px;
+  }
+  &__desc {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 0;
   }
 }

@@ -7,7 +7,6 @@
   &__card {
     max-width: 350px;
     height: 355px;
-    position: relative;
   }
   &__img {
     width: 100%;
@@ -21,10 +20,6 @@
     padding: 33px 32px 25px;
     background-color: $main-light;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    bottom: 0;
   }
   &__paragraph {
     line-height: 1.5;

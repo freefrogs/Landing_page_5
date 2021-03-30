@@ -1,0 +1,27 @@
+.technology {
+  background-color: $main-light;
+  &__box {
+    @include arrange-children(space-between);
+    padding-bottom: 108px;
+  }
+  &__card {
+    width: 255px;
+    height: 226px;
+  }
+  &__number {
+    font-size: 100px;
+    font-weight: 700;
+    color: $desc-font;
+    opacity: 8%;
+  }
+  &__path {
+    fill: $details2_1;
+  }
+  &__paragraph {
+    color: $main-dark;
+    margin: 10px 30px 20px 34px;
+  }
+  &__desc {
+    width: 100%;
+  }
+}
