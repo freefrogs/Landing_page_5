@@ -1,20 +1,38 @@
 .download {
   background-color: $details2_1;
   min-height: 500px;
-  padding: 95px 0;
+  padding: 122px 0 100px;
   color: $main-light;
+  @media (max-width: 1100px) {
+    padding: 50px 0;
+  }
+  @media (max-width: 600px) {
+    padding: 20px 0;
+  }
   &__title {
     font-size: 36px;
     font-weight: 600;
     padding-bottom: 50px;
+    @media (max-width: 600px) {
+      padding-bottom: 20px;
+    }
   }
   &__box {
     display: flex;
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
   &__desc {
     width: 40%;
     margin-right: 81px;
     padding-right: 10px;
+    @media (max-width: 1100px) {
+      width: 80%;
+      margin: 0 auto;
+    }
   }
   &__paragraph {
     font-size: 14px;
@@ -38,6 +56,17 @@
   &__slider {
     position: relative;
     width: 48%;
+    @media (max-width: 1100px) {
+      width: 60%;
+      min-height: 400px;
+      margin: 0 auto;
+    }
+    @media (max-width: 700px) {
+      min-height: 300px;
+    }
+    @media (max-width: 450px) {
+      min-height: 250px;
+    }
   }
   &__slide {
     position: absolute;
@@ -56,6 +85,10 @@
       opacity: 0.5;
       transform: scale(0.861) translate(-78%, -59%);
       z-index: 2;
+    }
+    @media (max-width: 800px) {
+      width: 100%;
+      height: auto;
     }
   }
 }

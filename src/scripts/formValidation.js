@@ -30,6 +30,7 @@ const formValidation = () => {
   inputName.addEventListener("input", e => markFieldAsError(e.target, !testTextField(e.target, 2, 20)));
   inputLastName.addEventListener("input", e => markFieldAsError(e.target, !testTextField(e.target, 2, 50)));
   inputPhone.addEventListener("input", e => markFieldAsError(e.target, !testTextField(e.target, 2, 22)));
+  selectService.addEventListener("input", e => markFieldAsError(e.target, !selectService.value));
 
   form.addEventListener("submit", e => {
     e.preventDefault();

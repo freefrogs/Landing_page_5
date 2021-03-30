@@ -3,10 +3,18 @@
   &__box {
     @include arrange-children(space-between);
     padding-bottom: 124px;
+    @media (max-width: 1350px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding-bottom: 50px;
+    }
   }
   &__card {
     max-width: 350px;
     height: 355px;
+    @media (max-width: 1350px) {
+      margin-bottom: 25px;
+    }
   }
   &__img {
     width: 100%;

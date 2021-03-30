@@ -3,10 +3,14 @@
   &__box {
     @include arrange-children(space-between);
     padding-bottom: 108px;
+    @media (max-width: 1000px) {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
   &__card {
     width: 255px;
-    height: 226px;
+    height: 211px;
   }
   &__number {
     font-size: 100px;

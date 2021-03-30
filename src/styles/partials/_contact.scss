@@ -1,22 +1,49 @@
 .contact {
   padding: 117px 0 78px;
+  @media (max-width: 900px) {
+    padding: 60px 0;
+  }
+  @media (max-width: 600px) {
+    padding: 40px 10px;
+  }
   &__box {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__desc {
+    @media (max-width: 800px) {
+      text-align: center;
+    }
   }
   &__title {
     font-size: 36px;
     color: $main-dark;
     padding-bottom: 60px;
+    @media (max-width: 800px) {
+      padding-bottom: 20px;
+    }
   }
   &__paragraph {
     line-height: 1.4;
     font-size: 14px;
     text-align: justify;
     padding-right: 125px;
+    @media (max-width: 900px) {
+      padding-right: 60px;
+    }
+    @media (max-width: 800px) {
+      text-align: center;
+      padding-right: 0;
+    }
   }
   &__form {
     max-width: 540px;
+    @media (max-width: 800px) {
+      margin: 50px auto 0;
+    }
   }
   &__row {
     position: relative;

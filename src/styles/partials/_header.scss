@@ -2,6 +2,7 @@
   background-image: $hero-gradient, url(../assets/header/hero.jpg);
   min-height: 782px;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
@@ -11,6 +12,9 @@
 .nav {
   padding-top: 59px;
   @include arrange-children(space-between);
+  @media (max-width: 450px) {
+    padding-top: 35px;
+  }
   &__box {
     @include arrange-children(center);
   }
@@ -25,18 +29,89 @@
   }
   &__list {
     @include arrange-children(space-between);
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+  &__hamburger {
+    display: none;
+    position: fixed;
+    background-color: $main-light;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    z-index: 30;
+    box-shadow: 0 0 5px $details2_1;
+    @media (max-width: 700px) {
+      display: block;
+    }
+    @media (max-width: 450px) {
+      top: 10px;
+      right: 10px;
+    }
+    &__line {
+      width: 50px;
+      height: 5px;
+      background-color: $details2_1;
+      transition: all $transition ease-in-out;
+      border-radius: 5px;
+      margin: 8px auto;
+      &--1 {
+        margin-top: 22px;
+      }
+    }
+    &--active {
+      & .nav__hamburger__line:first-child {
+        transform: translateY(13px) rotate(45deg);
+      }
+      & .nav__hamburger__line:nth-child(2) {
+        opacity: 0;
+      }
+      & .nav__hamburger__line:nth-child(3) {
+        transform: translateY(-13px) rotate(-45deg);
+      }
+    }
+  }
+  &__small {
+    display: none;
+    @media (max-width: 700px) {
+      position: fixed;
+      display: block;
+      background-color: $details2_1;
+      width: 100vw;
+      z-index: 20;
+      transform: translateY(-500px);
+      opacity: 0;
+      transition: $transition2;
+    }
+    &--active {
+      @media (max-width: 700px) {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
   }
   &__item {
     font-size: 14px;
     text-transform: uppercase;
     color: $main-light;
-    padding-left: 15px;
     transition: $transition;
+    &--big {
+      padding-left: 21px;
+    }
+    &--small {
+      font-size: 16px;
+      padding: 15px;
+      text-align: center;
+    }
     &:hover {
       font-weight: 700;
     }
     &--active {
       font-weight: 700;
+      padding-left: 0;
     }
   }
 }
@@ -50,15 +125,25 @@
   &__title {
     font-size: 72px;
     font-weight: 700;
-    letter-spacing: 5%;
+    letter-spacing: 4px;
     text-transform: uppercase;
+    padding-top: 54px;
     margin-bottom: 39px;
+    @media (max-width: 700px) {
+      font-size: 60px;
+    }
+    @media (max-width: 600px) {
+      font-size: 40px;
+    }
+    @media (max-width: 600px) {
+      font-size: 32px;
+    }
   }
   &__desc {
     font-size: 24px;
     font-weight: 600px;
     line-height: 1.5;
     max-width: 540px;
-    padding: 0 20px 39px;
+    padding: 0 15px 39px 39px;
   }
 }
