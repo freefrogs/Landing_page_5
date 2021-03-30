@@ -1,0 +1,62 @@
+.download {
+  background-color: $details2_1;
+  min-height: 500px;
+  padding: 95px 0;
+  color: $main-light;
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+    padding-bottom: 50px;
+  }
+  &__box {
+    display: flex;
+  }
+  &__desc {
+    width: 40%;
+    margin-right: 81px;
+    padding-right: 10px;
+  }
+  &__paragraph {
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: justify;
+    margin-bottom: 42px;
+  }
+  &__box--link {
+    width: 135px;
+    @include arrange-children(space-between);
+  }
+  &__path {
+    fill: $main-light;
+  }
+  &__link {
+    transition: $transition;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__slider {
+    position: relative;
+    width: 48%;
+  }
+  &__slide {
+    position: absolute;
+    border-radius: 15px;
+    @include center;
+    transition: .6s ease;
+    &--1 {
+      opacity: 0.5;
+      transform: scale(0.861) translate(-39%, -60%);
+      z-index: 2;
+    }
+    &--2 {
+      z-index: 10;
+    }
+    &--3 {
+      opacity: 0.5;
+      transform: scale(0.861) translate(-78%, -59%);
+      z-index: 2;
+    }
+  }
+}
+

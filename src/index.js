@@ -1,5 +1,6 @@
 import './styles/style.scss';
+import slider from './scripts/slider';
 
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('hello world');
+  slider();
 });

@@ -1,7 +1,7 @@
 .header {
   background-image: $hero-gradient, url(../assets/header/hero.jpg);
   min-height: 782px;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
